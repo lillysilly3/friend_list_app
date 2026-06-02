@@ -20,6 +20,7 @@ This is my first Ruby on Rails project. Building it taught me:
 - Associating user with friends' list
 - Restricting access so users can only edit their own data
 - Using Bootstrap for a responsive UI
+- Deployment to Heroku
 
 ## Tech Stack
 
@@ -55,7 +56,6 @@ rails server
 Then open `http://localhost:3000` in your browser.
 
 ## Future Ideas
-- Deploy page to Heroku
 - Add a notes/bio field for each friend
 - Birthday reminders
 - Search/filter friends by name
