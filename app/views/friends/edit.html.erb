@@ -1,0 +1,12 @@
+<% content_for :title, "Editing friend" %>
+
+<h1>Editing friend</h1>
+
+<%= render "form", friend: @friend %>
+
+<br>
+
+<div>
+  <%= link_to "Show this friend", @friend, class: "btn btn-outline-success btn-sm" %>
+   <%= button_to "Delete", friend_path(@friend), method: :delete, class: "btn btn-outline-danger btn-sm", form: { class: "d-inline" }, data: { turbo_confirm: "Are you sure?" } %>
+</div>
