@@ -25,7 +25,7 @@ This is my first Ruby on Rails project. Building it taught me:
 ## Tech Stack
 
 - Ruby on Rails 8.1
-- SQLite3
+- PostgreSQL
 - Devise
 - Hotwire (Turbo + Stimulus)
 - Bootstrap
@@ -43,8 +43,9 @@ cd friend_list_app
 bundle install
 ```
 
-**Set up the database:**
+**Make sure PostgreSQL is running, then set up the database:**
 ```bash
+rails db:create
 rails db:migrate
 ```
 
