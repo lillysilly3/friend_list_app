@@ -2,6 +2,8 @@
 
 A Ruby on Rails web application for managing your personal friend list. Users can sign up, log in, and manage their own contacts — each user only sees and controls their own friends.
 
+**Live app:** https://friend-list-app-0a3b2c1a2f33.herokuapp.com
+
 ## Features
 
 - User authentication with Devise (sign up, log in, sign out, delete account)
