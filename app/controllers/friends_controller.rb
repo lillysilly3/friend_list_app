@@ -1,7 +1,7 @@
 class FriendsController < ApplicationController
   before_action :set_friend, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :corect_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!, except: [ :index, :show ]
+  before_action :corect_user, only: [ :edit, :update, :destroy ]
   # GET /friends or /friends.json
   def index
     @friends = Friend.all
@@ -73,6 +73,6 @@ class FriendsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def friend_params
-      params.expect(friend: [ :first_name, :last_name, :email, :phone, :github, :user_id])
+      params.expect(friend: [ :first_name, :last_name, :email, :phone, :github, :user_id ])
     end
 end
