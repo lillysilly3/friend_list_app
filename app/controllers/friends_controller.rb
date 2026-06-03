@@ -1,10 +1,10 @@
 class FriendsController < ApplicationController
   before_action :set_friend, only: %i[ show edit update destroy ]
-  before_action :authenticate_user!, except: [ :index, :show ]
-  before_action :corect_user, only: [ :edit, :update, :destroy ]
+  before_action :authenticate_user!, except: [ :index ]
+  before_action :correct_user, only: [ :show, :edit, :update, :destroy ]
   # GET /friends or /friends.json
   def index
-    @friends = Friend.all
+    @friends = user_signed_in? ? current_user.friends : []
   end
 
   # GET /friends/1 or /friends/1.json
@@ -60,12 +60,13 @@ class FriendsController < ApplicationController
     end
   end
 
-  def corect_user
-    @friend = current_user.friends.find_by(id: params[:id])
-    redirect_to friends_path, notice: "Not Authorized to Edit This Friend" if @friend.nil?
-  end
-
   private
+
+    def correct_user
+      @friend = current_user.friends.find_by(id: params[:id])
+      redirect_to friends_path, notice: "Not Authorized to Edit This Friend" if @friend.nil?
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_friend
       @friend = Friend.find(params.expect(:id))
@@ -73,6 +74,6 @@ class FriendsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def friend_params
-      params.expect(friend: [ :first_name, :last_name, :email, :phone, :github, :user_id ])
+      params.expect(friend: [ :first_name, :last_name, :email, :phone, :github ])
     end
 end

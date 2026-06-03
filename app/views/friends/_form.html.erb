@@ -20,19 +20,15 @@
   </div>
 
   <div class="form-group">
-    <%= form.text_field :email, class: "form-control", placeholder: "Email Adress" %>
+    <%= form.email_field :email, class: "form-control", placeholder: "Email Address" %>
   </div>
 
   <div class="form-group">
-    <%= form.text_field :phone, class: "form-control", placeholder: "Phone Number" %>
+    <%= form.telephone_field :phone, class: "form-control", placeholder: "Phone Number" %>
   </div>
 
   <div class="form-group">
     <%= form.text_field :github, class: "form-control", placeholder: "Github" %>
-  </div>
-
-  <div class="form-group">
-      <%= form.number_field :user_id, id: :friend_user_id, class: "form-control", value: current_user.id, type: :hidden %>
   </div>
 <br>
   <div class="actions">

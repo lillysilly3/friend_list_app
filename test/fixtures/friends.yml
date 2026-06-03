@@ -1,15 +1,17 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  phone: MyString
-  github: MyString
+  first_name: John
+  last_name: Smith
+  email: john@example.com
+  phone: "123456789"
+  github: johnsmith
+  user: one
 
 two:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  phone: MyString
-  github: MyString
+  first_name: Jane
+  last_name: Doe
+  email: jane@example.com
+  phone: "987654321"
+  github: janedoe
+  user: two

@@ -8,7 +8,8 @@ A Ruby on Rails web application for managing your personal friend list. Users ca
 
 - User authentication with Devise (sign up, log in, sign out, delete account)
 - Add, show, edit, and delete friends
-- Each user has their own private friends' list
+- Each user has their own private, secured friends' list
+- Authorization — users can only view and edit their own friends
 - Responsive UI with Bootstrap
 
 ## What I Learned
@@ -19,10 +20,11 @@ This is my first Ruby on Rails project. Building it taught me:
 - Setting up user authentication with Devise
 - Creating and running database migrations
 - Building CRUD functionality with Rails scaffolding
-- Associating user with friends' list
-- Restricting access so users can only edit their own data
+- Associating users with their own data using model associations
+- Securing authorization so users can only view and edit their own friends
+- Writing model and controller tests
 - Using Bootstrap for a responsive UI
-- Deployment to Heroku
+- Deployment to Heroku with PostgreSQL
 
 ## Tech Stack
 
@@ -63,3 +65,7 @@ Then open `http://localhost:3000` in your browser.
 - Birthday reminders
 - Search/filter friends by name
 - Card view instead of a table
+
+## Acknowledgments
+
+This project was built following the [Ruby on Rails tutorial by Codemy.com](https://www.youtube.com/watch?v=fmyvWz5TUWg) on YouTube.
