@@ -12,7 +12,7 @@ A Ruby on Rails web application for managing your personal friend list. Users ca
 - Authorization — users can only view and edit their own friends
 - Responsive UI with Bootstrap
 
-## What I Learned
+## What I Explored
 
 This is my first Ruby on Rails project. Building it taught me:
 
@@ -33,6 +33,13 @@ This is my first Ruby on Rails project. Building it taught me:
 - Devise
 - Hotwire (Turbo + Stimulus)
 - Bootstrap
+
+## Prerequisites
+
+- Ruby 3.x+
+- Ruby on Rails 8.1
+- PostgreSQL
+- Bundler (`gem install bundler`)
 
 ## Getting Started
 
